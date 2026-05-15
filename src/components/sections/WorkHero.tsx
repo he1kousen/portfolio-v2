@@ -1,4 +1,4 @@
-import { motion, type Variants, AnimatePresence } from 'framer-motion'
+import { motion, type Variants } from 'framer-motion'
 import { ArrowRight, UserCircle, ChevronDown } from 'lucide-react'
 import { useEffect, useState, useCallback } from 'react'
 
