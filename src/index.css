@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "NeueHaas", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  --font-mono: "Courier New", monospace;
+  
+  --color-brand-primary: #F46B5D;
+  --color-brand-blue: #0066FF;
+  --color-brand-orange: #FF8C42;
+  
+  --color-bg-primary: #0E0E0E;
+  --color-bg-secondary: #101010;
+  --color-bg-tertiary: #181818;
+  
+  --color-status-success: #57C353;
+  --color-status-warning: #F9BD4E;
+  
+  --shadow-raised: rgb(61, 61, 61) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 0px 10px 0px inset, rgba(0, 0, 0, 0.267) 0px 0px 12px 0px;
+  --shadow-floating: rgba(0, 0, 0, 0.114) 0px 9px 20px 0px;
+  --shadow-elevated: rgba(0, 0, 0, 0.114) 0px 9px 30px 0px;
+  --shadow-luminous: rgba(255, 255, 255, 0.9) 0px 0px 25px 3px;
+  
+  --radius-pill: 9999px;
+
+  --animate-blink: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+:root {
+  font-family: var(--font-sans);
+  color: #FFFFFF;
+  background: var(--color-bg-primary);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background: var(--color-bg-primary);
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  color: #0E0E0E;
+  background: var(--color-brand-primary);
+}
+
+.text-glow-white {
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.4), 0 0 40px rgba(255, 255, 255, 0.2);
+}
+
+/* Custom Scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2A2A2A var(--color-bg-primary);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2A2A2A;
+  border-radius: 9999px;
+  border: 2px solid var(--color-bg-primary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3D3D3D;
+}
