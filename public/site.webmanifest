@@ -1,0 +1,21 @@
+{
+  "name": "he1kousen — Software Engineer Portfolio",
+  "short_name": "he1kousen",
+  "description": "Personal portfolio of he1kousen (Muhammad Ikhsan), Software Engineer & Frontend Developer.",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#0E0E0E",
+  "background_color": "#0E0E0E",
+  "icons": [
+    {
+      "src": "/favicon_io/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon_io/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

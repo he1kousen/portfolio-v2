@@ -1,0 +1,6 @@
+# robots.txt for he1kousen portfolio
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://he1kousen.vercel.app/sitemap.xml
