@@ -4,14 +4,25 @@ import { Mail } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 export function ContactSection() {
+    const sectionRef = useRef<HTMLElement>(null);
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const targetRef = useRef<HTMLAnchorElement>(null);
     const mousePosRef = useRef<{ x: number | null, y: number | null }>({ x: null, y: null });
     const ctxRef = useRef<CanvasRenderingContext2D | null>(null);
     const animationFrameIdRef = useRef<number | null>(null);
+    
+    const lastScrollYRef = useRef(0);
+    const isScrollingDownRef = useRef(false);
 
     const drawArrow = useCallback(() => {
-        if (!canvasRef.current || !targetRef.current || !ctxRef.current) return;
+        if (!canvasRef.current || !targetRef.current || !ctxRef.current || !sectionRef.current) return;
+        
+        const sectionRect = sectionRef.current.getBoundingClientRect();
+        // Hanya muncul jika Contact Section sudah mulai terlihat di layar
+        if (sectionRect.top > window.innerHeight - 50) return;
+
+        // Hanya muncul jika sedang scroll ke bawah
+        if (!isScrollingDownRef.current) return;
 
         const targetEl = targetRef.current;
         const ctx = ctxRef.current;
@@ -83,8 +94,19 @@ export function ContactSection() {
             mousePosRef.current = { x: e.clientX, y: e.clientY };
         };
 
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
+            if (currentScrollY > lastScrollYRef.current + 5) {
+                isScrollingDownRef.current = true;
+            } else if (currentScrollY < lastScrollYRef.current - 5) {
+                isScrollingDownRef.current = false;
+            }
+            lastScrollYRef.current = currentScrollY;
+        };
+
         window.addEventListener("resize", updateCanvasSize);
         window.addEventListener("mousemove", handleMouseMove);
+        window.addEventListener("scroll", handleScroll);
         updateCanvasSize();
 
         const animateLoop = () => {
@@ -100,6 +122,7 @@ export function ContactSection() {
         return () => {
             window.removeEventListener("resize", updateCanvasSize);
             window.removeEventListener("mousemove", handleMouseMove);
+            window.removeEventListener("scroll", handleScroll);
             if (animationFrameIdRef.current) {
                 cancelAnimationFrame(animationFrameIdRef.current);
             }
@@ -107,7 +130,7 @@ export function ContactSection() {
     }, [drawArrow]);
 
     return (
-        <section className="relative mt-20 mb-8 flex flex-col items-center justify-center py-16 sm:py-24 border-t border-[rgba(242,242,242,0.1)] z-10">
+        <section ref={sectionRef} className="relative mt-20 mb-8 flex flex-col items-center justify-center py-16 sm:py-24 border-t border-[rgba(242,242,242,0.1)] z-10">
             <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
