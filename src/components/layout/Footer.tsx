@@ -9,7 +9,7 @@ export function Footer() {
         {/* Left: Branding & Copyright */}
         <div className="flex flex-col items-center sm:items-start">
           <span className="text-[14px] font-semibold text-[#F9BD4E]">he1kousen / Ikhsan</span>
-          <span className="mt-1 text-[13px] text-black/50 dark:text-white/50">
+          <span className="mt-1 text-[13px] text-white/50">
             © {new Date().getFullYear()} All rights reserved.
           </span>
         </div>
@@ -22,7 +22,7 @@ export function Footer() {
               href={social.href}
               target={social.href.startsWith('http') ? '_blank' : undefined}
               rel={social.href.startsWith('http') ? 'noreferrer' : undefined}
-              className="group flex items-center gap-1 text-[13px] font-medium text-black/80 dark:text-white/80 transition-colors hover:text-black dark:text-white"
+              className="group flex items-center gap-1 text-[13px] font-medium text-white/80 transition-colors hover:text-white"
             >
               {social.label}
               <ArrowUpRight className="size-3 text-[#F9BD4E] opacity-70 transition-opacity group-hover:opacity-100" />

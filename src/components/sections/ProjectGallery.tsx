@@ -56,7 +56,7 @@ export function ProjectGallery() {
             className="group relative flex flex-col rounded-2xl border border-[#222222] bg-[#111111] p-4 sm:p-6 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1)] transition-all duration-300 ease-out hover:-translate-y-1 hover:border-[#F9BD4E] hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.15),0_8px_30px_rgba(0,0,0,0.5)] cursor-pointer text-left"
           >
             {/* Number Badge */}
-            <div className="absolute left-8 top-8 z-10 flex size-8 items-center justify-center rounded-full bg-[#1a1a1a] border border-[#2a2a2a] text-[13px] font-medium text-black/80 dark:text-white/80 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.15)] transition-all duration-250 group-hover:bg-[#F9BD4E] group-hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.4)] group-hover:text-black group-hover:scale-110">
+            <div className="absolute left-8 top-8 z-10 flex size-8 items-center justify-center rounded-full bg-[#1a1a1a] border border-[#2a2a2a] text-[13px] font-medium text-white/80 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.15)] transition-all duration-250 group-hover:bg-[#F9BD4E] group-hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.4)] group-hover:text-black group-hover:scale-110">
               {index + 1}
             </div>
 
@@ -79,7 +79,7 @@ export function ProjectGallery() {
                     {typeof project.companyLogo === 'string' ? (
                       <img src={project.companyLogo} alt={`${project.title} brand`} className="h-full w-auto object-contain object-left opacity-80 transition-opacity group-hover:opacity-100" />
                     ) : (
-                      <div className="h-full w-auto text-black/80 dark:text-white/80 transition-colors group-hover:text-black dark:text-white">
+                      <div className="h-full w-auto text-white/80 transition-colors group-hover:text-white">
                         {project.companyLogo}
                       </div>
                     )}
@@ -95,7 +95,7 @@ export function ProjectGallery() {
                   {project.stack.map((tech) => (
                     <span
                       key={tech}
-                      className="rounded bg-[#1a1a1a] border border-[#2a2a2a] px-2.5 py-1 text-[12px] font-mono text-[#a0a0a0] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.08)] transition-colors group-hover:text-black/80 dark:text-white/80"
+                      className="rounded bg-[#1a1a1a] border border-[#2a2a2a] px-2.5 py-1 text-[12px] font-mono text-[#a0a0a0] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.08)] transition-colors group-hover:text-white/80"
                     >
                       {tech}
                     </span>

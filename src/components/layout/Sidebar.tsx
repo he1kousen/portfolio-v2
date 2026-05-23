@@ -48,10 +48,10 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
               transition={{ delay: 0.18, duration: 0.42, ease: smoothEase }}
               className="mt-4 space-y-1"
             >
-              <h2 className="text-sm font-semibold text-black dark:text-white leading-snug">
+              <h2 className="text-sm font-semibold text-white leading-snug">
                 {aboutInfo.name}
               </h2>
-              <p className="text-xs text-black/42 dark:text-white/42 leading-relaxed">
+              <p className="text-xs text-white/42 leading-relaxed">
                 {aboutInfo.location}
               </p>
             </motion.div>
@@ -73,7 +73,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                   initial={{ opacity: 0, x: -12 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.28 + i * 0.07, duration: 0.38, ease: smoothEase }}
-                  className="group inline-flex items-center gap-1 text-sm text-black/60 dark:text-white/60 transition-colors duration-200 hover:text-black dark:text-white"
+                  className="group inline-flex items-center gap-1 text-sm text-white/60 transition-colors duration-200 hover:text-white"
                   target={social.href.startsWith('http') ? '_blank' : undefined}
                   rel={social.href.startsWith('http') ? 'noreferrer' : undefined}
                 >

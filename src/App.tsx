@@ -30,7 +30,7 @@ function App() {
 
   return (
     <div
-      className="relative min-h-screen overflow-x-clip text-black dark:text-white flex flex-col"
+      className="relative min-h-screen overflow-x-clip text-white flex flex-col"
       style={{ background: '#0A0A0A' }}
     >
       {/* Ambient Top Light */}

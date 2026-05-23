@@ -138,16 +138,16 @@ export function ContactSection() {
                 transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
                 className="text-center px-4 max-w-2xl mx-auto flex flex-col items-center"
             >
-                <h2 className="text-3xl sm:text-4xl font-semibold mb-4 text-black dark:text-white tracking-tight">
+                <h2 className="text-3xl sm:text-4xl font-semibold mb-4 text-white tracking-tight">
                     Interested in working together?
                 </h2>
-                <p className="text-base sm:text-lg text-black/60 dark:text-white/60 mb-10 max-w-lg">
+                <p className="text-base sm:text-lg text-white/60 mb-10 max-w-lg">
                     {contact.headline}
                 </p>
                 <a
                     ref={targetRef}
                     href={`mailto:${contact.email}`}
-                    className="group relative flex items-center gap-2 rounded-full border border-[rgba(242,242,242,0.1)] bg-black/5 dark:bg-white/5 px-6 py-3.5 text-[15px] font-medium text-black dark:text-white shadow-floating transition-all duration-300 hover:bg-black/5 dark:hover:bg-white/10 hover:shadow-elevated hover:scale-105 active:scale-95"
+                    className="group relative flex items-center gap-2 rounded-full border border-[rgba(242,242,242,0.1)] bg-white/5 px-6 py-3.5 text-[15px] font-medium text-white shadow-floating transition-all duration-300 hover:bg-white/10 hover:shadow-elevated hover:scale-105 active:scale-95"
                 >
                     <Mail className="h-4 w-4" />
                     <span>Contact Me</span>
