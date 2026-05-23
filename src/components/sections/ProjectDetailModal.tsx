@@ -49,7 +49,7 @@ export function ProjectDetailModal({ project, onClose }: ProjectDetailModalProps
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.4 }}
-        className="absolute inset-0 bg-black/60 backdrop-blur-md"
+        className="absolute inset-0 bg-white/80 dark:bg-black/60 backdrop-blur-md"
         onClick={onClose}
       />
 
@@ -64,7 +64,7 @@ export function ProjectDetailModal({ project, onClose }: ProjectDetailModalProps
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute right-4 top-4 z-20 flex size-10 items-center justify-center rounded-full bg-black/50 text-white backdrop-blur-md transition-colors hover:bg-white/20"
+          className="absolute right-4 top-4 z-20 flex size-10 items-center justify-center rounded-full bg-white/70 dark:bg-black/50 text-black dark:text-white backdrop-blur-md transition-colors hover:bg-black/10 dark:hover:bg-black/10 dark:bg-white/20"
         >
           <X className="size-5" />
         </button>
@@ -94,13 +94,13 @@ export function ProjectDetailModal({ project, onClose }: ProjectDetailModalProps
               <>
                 <button
                   onClick={prevImage}
-                  className="absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 flex size-10 sm:size-12 items-center justify-center rounded-full bg-black/50 text-white backdrop-blur-md opacity-100 sm:opacity-0 transition-all sm:group-hover:opacity-100 hover:bg-white/20 hover:scale-110"
+                  className="absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 flex size-10 sm:size-12 items-center justify-center rounded-full bg-white/70 dark:bg-black/50 text-black dark:text-white backdrop-blur-md opacity-100 sm:opacity-0 transition-all sm:group-hover:opacity-100 hover:bg-black/10 dark:hover:bg-black/10 dark:bg-white/20 hover:scale-110"
                 >
                   <ChevronLeft className="size-6 sm:size-8" />
                 </button>
                 <button
                   onClick={nextImage}
-                  className="absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 flex size-10 sm:size-12 items-center justify-center rounded-full bg-black/50 text-white backdrop-blur-md opacity-100 sm:opacity-0 transition-all sm:group-hover:opacity-100 hover:bg-white/20 hover:scale-110"
+                  className="absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 flex size-10 sm:size-12 items-center justify-center rounded-full bg-white/70 dark:bg-black/50 text-black dark:text-white backdrop-blur-md opacity-100 sm:opacity-0 transition-all sm:group-hover:opacity-100 hover:bg-black/10 dark:hover:bg-black/10 dark:bg-white/20 hover:scale-110"
                 >
                   <ChevronRight className="size-6 sm:size-8" />
                 </button>
@@ -131,14 +131,14 @@ export function ProjectDetailModal({ project, onClose }: ProjectDetailModalProps
                   {typeof project.companyLogo === 'string' ? (
                     <img src={project.companyLogo} alt={`${project.title} brand`} className="h-full w-auto object-contain object-left" />
                   ) : (
-                    <div className="h-full w-auto text-white">
+                    <div className="h-full w-auto text-black dark:text-white">
                       {project.companyLogo}
                     </div>
                   )}
                 </div>
               )}
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 mb-6">
-                <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-white">
+                <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-black dark:text-white">
                   {project.title}
                 </h2>
                 <a

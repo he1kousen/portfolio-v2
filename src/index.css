@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
   --font-heading: "Inter", sans-serif;
@@ -10,9 +12,9 @@
   --color-brand-blue: #0066FF;
   --color-brand-orange: #FF8C42;
   
-  --color-bg-primary: #0E0E0E;
-  --color-bg-secondary: #101010;
-  --color-bg-tertiary: #181818;
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-secondary: var(--bg-secondary);
+  --color-bg-tertiary: var(--bg-tertiary);
   
   --color-status-success: #57C353;
   --color-status-warning: #F9BD4E;
@@ -33,13 +35,24 @@
 }
 
 :root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f9fafb;
+  --bg-tertiary: #f3f4f6;
+
   font-family: var(--font-sans);
-  color: #FFFFFF;
-  background: var(--color-bg-primary);
+  color: #111827;
+  background: var(--bg-primary);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.dark {
+  --bg-primary: #0E0E0E;
+  --bg-secondary: #101010;
+  --bg-tertiary: #181818;
+  color: #FFFFFF;
 }
 
 html {
@@ -55,7 +68,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   margin: 0;
-  background: var(--color-bg-primary);
+  background: var(--bg-primary);
 }
 
 button,
@@ -64,18 +77,31 @@ a {
 }
 
 ::selection {
+  color: #ffffff;
+  background: var(--color-brand-primary);
+}
+
+.dark ::selection {
   color: #0E0E0E;
   background: var(--color-brand-primary);
 }
 
 .text-glow-white {
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.2), 0 0 40px rgba(0, 0, 0, 0.1);
+}
+
+.dark .text-glow-white {
   text-shadow: 0 0 20px rgba(255, 255, 255, 0.4), 0 0 40px rgba(255, 255, 255, 0.2);
 }
 
 /* Custom Scrollbar */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #2A2A2A var(--color-bg-primary);
+  scrollbar-color: #e5e7eb var(--bg-primary);
+}
+
+.dark * {
+  scrollbar-color: #2A2A2A var(--bg-primary);
 }
 
 ::-webkit-scrollbar {
@@ -84,15 +110,24 @@ a {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-bg-primary);
+  background: var(--bg-primary);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #2A2A2A;
+  background: #d1d5db;
   border-radius: 9999px;
-  border: 2px solid var(--color-bg-primary);
+  border: 2px solid var(--bg-primary);
 }
 
 ::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #2A2A2A;
+  border: 2px solid var(--bg-primary);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
   background: #3D3D3D;
 }

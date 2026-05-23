@@ -68,23 +68,25 @@ function HamburgerIcon({ isOpen }: { isOpen: boolean }) {
   )
 }
 
-import { ArrowUpRight } from 'lucide-react'
+import { ArrowUpRight, Sun, Moon } from 'lucide-react'
+import { useDarkMode } from '../../hooks/useDarkMode'
 
 export function TopNav({ activeTab, onTabChange, sidebarOpen, onToggleSidebar }: TopNavProps) {
+  const { isDark, toggleDarkMode } = useDarkMode()
   return (
     <header className="fixed inset-x-0 top-0 z-50 h-20 bg-transparent">
       <div className="mx-auto flex h-full items-center justify-between px-6 md:px-12 pt-4">
         {/* Left — Brand/Name */}
         <div className="flex-1">
           <div className="flex flex-col">
-            <span className="text-[14px] font-semibold text-white">Muhammad Ikhsan</span>
+            <span className="text-[14px] font-semibold text-black dark:text-white">Muhammad Ikhsan</span>
             <span className="text-[12px] font-normal text-[#8A8A8A]">Junior Web Developer</span>
           </div>
         </div>
 
         {/* Center — Tab pill & Hamburger */}
         <div className="flex shrink-0 items-center gap-2">
-          <div className="relative flex items-center rounded-[9999px] border border-[#2A2A2A] bg-[#141414]/80 p-1 shadow-floating backdrop-blur-md">
+          <div className="relative flex items-center rounded-[9999px] border border-[#2A2A2A] bg-white/80 dark:bg-[#141414]/80 p-1 shadow-floating backdrop-blur-md">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
@@ -92,7 +94,7 @@ export function TopNav({ activeTab, onTabChange, sidebarOpen, onToggleSidebar }:
                 onClick={() => onTabChange(tab.id)}
                 className={cn(
                   'relative min-w-[68px] rounded-[9999px] px-5 py-1.5 text-[13px] font-medium transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-primary',
-                  activeTab === tab.id ? 'text-white' : 'text-[#8A8A8A] hover:text-white',
+                  activeTab === tab.id ? 'text-black dark:text-white' : 'text-[#8A8A8A] hover:text-black dark:text-white',
                 )}
               >
                 {activeTab === tab.id && (
@@ -111,6 +113,18 @@ export function TopNav({ activeTab, onTabChange, sidebarOpen, onToggleSidebar }:
           </div>
 
           <motion.button
+            aria-label="Toggle dark mode"
+            onClick={toggleDarkMode}
+            whileTap={{ scale: 0.88 }}
+            className={cn(
+              'relative flex size-[38px] items-center justify-center rounded-full border shadow-floating backdrop-blur-md transition-all duration-300',
+              'border-gray-300 dark:border-[#2A2A2A] bg-white/80 dark:bg-[#141414]/80 text-gray-500 dark:text-[#8A8A8A] hover:border-gray-400 dark:hover:border-[#3D3D3D] hover:text-black dark:hover:text-white'
+            )}
+          >
+            {isDark ? <Sun className="size-4" /> : <Moon className="size-4" />}
+          </motion.button>
+
+          <motion.button
             aria-label={sidebarOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={sidebarOpen}
             onClick={onToggleSidebar}
@@ -118,7 +132,7 @@ export function TopNav({ activeTab, onTabChange, sidebarOpen, onToggleSidebar }:
               'relative flex size-[38px] items-center justify-center rounded-full border shadow-floating backdrop-blur-md transition-all duration-300',
               sidebarOpen
                 ? 'border-brand-primary/40 bg-brand-primary/10 text-brand-primary'
-                : 'border-[#2A2A2A] bg-[#141414]/80 text-[#8A8A8A] hover:border-[#3D3D3D] hover:text-white',
+                : 'border-[#2A2A2A] bg-white/80 dark:bg-[#141414]/80 text-[#8A8A8A] hover:border-[#3D3D3D] hover:text-black dark:text-white',
             )}
           >
             <HamburgerIcon isOpen={sidebarOpen} />
@@ -127,10 +141,10 @@ export function TopNav({ activeTab, onTabChange, sidebarOpen, onToggleSidebar }:
 
         {/* Right — Links */}
         <div className="hidden flex-1 items-center justify-end gap-6 md:flex">
-          <a href="https://linkedin.com/in/he1kousen" target="_blank" rel="noreferrer" className="flex items-center gap-1 text-[13px] font-medium text-white hover:text-[#8A8A8A] transition-colors">
+          <a href="https://linkedin.com/in/he1kousen" target="_blank" rel="noreferrer" className="flex items-center gap-1 text-[13px] font-medium text-black dark:text-white hover:text-[#8A8A8A] transition-colors">
             LinkedIn <ArrowUpRight className="size-3.5 text-[#8A8A8A]" />
           </a>
-          <a href="#" className="flex items-center gap-1 text-[13px] font-medium text-white hover:text-[#8A8A8A] transition-colors">
+          <a href="#" className="flex items-center gap-1 text-[13px] font-medium text-black dark:text-white hover:text-[#8A8A8A] transition-colors">
             Resume <ArrowUpRight className="size-3.5 text-[#8A8A8A]" />
           </a>
         </div>

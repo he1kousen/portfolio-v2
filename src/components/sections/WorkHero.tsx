@@ -99,10 +99,10 @@ export function WorkHero({ onNavigateInfo }: { onNavigateInfo: () => void }) {
       {/* ── Line 1: Name ─────────────────────────────────── */}
       <motion.h1
         variants={itemVariants}
-        className="relative mb-3 text-4xl font-semibold tracking-tight text-white sm:text-5xl md:text-[58px] md:leading-[1]"
+        className="relative mb-3 text-4xl font-semibold tracking-tight text-black dark:text-white sm:text-5xl md:text-[58px] md:leading-[1]"
       >
         I'm{' '}
-        <span className="text-white text-glow-white">
+        <span className="text-black dark:text-white dark:text-glow-white">
           he1kousen
         </span>
       </motion.h1>
@@ -110,11 +110,11 @@ export function WorkHero({ onNavigateInfo }: { onNavigateInfo: () => void }) {
       {/* ── Line 2: Typewriter role ──────────────────────── */}
       <motion.p
         variants={itemVariants}
-        className="relative mb-10 flex flex-wrap items-center justify-center gap-x-2 text-lg text-white/60 sm:text-xl md:text-2xl"
+        className="relative mb-10 flex flex-wrap items-center justify-center gap-x-2 text-lg text-black/60 dark:text-white/60 sm:text-xl md:text-2xl"
       >
         <span>and i'm a</span>
         <span className="relative inline-flex min-w-[180px] justify-start sm:min-w-[240px]">
-          <span className="font-semibold text-white">
+          <span className="font-semibold text-black dark:text-white">
             {typed}
           </span>
           {/* Blinking cursor */}
@@ -127,7 +127,7 @@ export function WorkHero({ onNavigateInfo }: { onNavigateInfo: () => void }) {
         {/* Primary CTA */}
         <button
           onClick={handleScrollToProjects}
-          className="group flex items-center gap-2 rounded-full border border-[rgba(242,242,242,0.1)] bg-white/5 px-5 py-3 text-[14px] font-medium text-white shadow-floating transition-all duration-300 hover:bg-white/10 hover:shadow-elevated"
+          className="group flex items-center gap-2 rounded-full border border-[rgba(242,242,242,0.1)] bg-black/5 dark:bg-white/5 px-5 py-3 text-[14px] font-medium text-black dark:text-white shadow-floating transition-all duration-300 hover:bg-black/5 dark:hover:bg-white/10 hover:shadow-elevated"
         >
           Browse Projects
           <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-0.5" />
@@ -136,7 +136,7 @@ export function WorkHero({ onNavigateInfo }: { onNavigateInfo: () => void }) {
         {/* Secondary CTA */}
         <button
           onClick={onNavigateInfo}
-          className="flex items-center gap-2 rounded-full border border-[rgba(242,242,242,0.1)] bg-transparent px-5 py-3 text-[14px] font-medium text-white/70 transition-all duration-300 hover:bg-white/5 hover:text-white"
+          className="flex items-center gap-2 rounded-full border border-[rgba(242,242,242,0.1)] bg-transparent px-5 py-3 text-[14px] font-medium text-black/70 dark:text-white/70 transition-all duration-300 hover:bg-black/5 dark:hover:bg-black/5 dark:bg-white/5 hover:text-black dark:text-white"
         >
           <UserCircle className="size-4" />
           About Me
