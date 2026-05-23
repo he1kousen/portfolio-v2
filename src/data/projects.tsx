@@ -35,7 +35,7 @@ export const projects: Project[] = [
   },
   {
     id: 2,
-    title: 'Zenitech',
+    title: 'Zenitech (Portfolio)',
     description: 'A full-featured Apple Authorized Reseller e-commerce platform with a clean, photography-first UI inspired by Apple design language.',
     stack: ['React', 'Tailwind CSS', 'shadcn', 'Zustand', 'Framer Motion', 'Lenis', 'Supabase', 'Midtrans'],
     image: '../assets/zenitech/home.png',
@@ -59,10 +59,10 @@ export const projects: Project[] = [
   },
   {
     id: 3,
-    title: 'Web Inventory',
+    title: 'Web Inventory (Portfolio)',
     description: 'A web-based inventory management system built to streamline stock tracking and product data management.',
     stack: ['Laravel', 'MySQL', 'Bootstrap'],
-    image: '../assets/intera-erp/finance.png',
+    image: '../assets/dhanisa/home.png',
     link: '#',
     companyLogo: '../assets/dhanisa/dmj.png',
     content: [
