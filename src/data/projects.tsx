@@ -33,6 +33,51 @@ export const projects: Project[] = [
 
     ]
   },
+  {
+    id: 2,
+    title: 'Zenitech',
+    description: 'A full-featured Apple Authorized Reseller e-commerce platform with a clean, photography-first UI inspired by Apple design language.',
+    stack: ['React', 'Tailwind CSS', 'shadcn', 'Zustand', 'Framer Motion', 'Lenis', 'Supabase', 'Midtrans'],
+    image: '../assets/zenitech/home.png',
+    link: 'https://zen1tech.vercel.app',
+    content: [
+      'Zenitech is a full-featured Apple Authorized Reseller e-commerce platform built with a strong emphasis on UI/UX — replicating Apple signature clean aesthetic through a photography-first layout, minimal borders, and intentional whitespace.',
+      'Functionally, the platform supports end-to-end shopping flows including user authentication, cart state management via Zustand, and a fully integrated Midtrans payment gateway for simulated checkouts. A separate Admin Dashboard handles product catalog management and order tracking.',
+      'The frontend is built with React 18 and Vite, styled with Tailwind CSS v4 and shadcn/ui, with smooth animations powered by Framer Motion, GSAP, and Lenis. Supabase serves as the backend — handling PostgreSQL, authentication, file storage, and edge functions — with the frontend deployed on Vercel.'
+    ],
+    gallery: [
+      '../assets/zenitech/home.png',
+      '../assets/zenitech/bestsellers.png',
+      '../assets/zenitech/featured.png',
+      '../assets/zenitech/products.png',
+      '../assets/zenitech/detail.png',
+      '../assets/zenitech/cart.png',
+      '../assets/zenitech/checkou.png',
+      '../assets/zenitech/orders.png'
+
+    ]
+  },
+  {
+    id: 3,
+    title: 'Web Inventory',
+    description: 'A web-based inventory management system built to streamline stock tracking and product data management.',
+    stack: ['Laravel', 'MySQL', 'Bootstrap'],
+    image: '../assets/intera-erp/finance.png',
+    link: '#',
+    companyLogo: '../assets/dhanisa/dmj.png',
+    content: [
+      'A web-based inventory management system developed using Laravel for server-side logic and database operations. The platform supports core warehouse workflows including inbound/outbound stock tracking, product data management, and automated reporting — reducing manual effort and improving operational accuracy.',
+      'The user interface is built with Bootstrap and jQuery, delivering a responsive and dynamic experience with asynchronous requests for smooth interaction. The system was designed with careful attention to database schema architecture and underwent functional testing throughout the development lifecycle to ensure reliability in real-world use.'
+    ],
+    gallery: [
+      '../assets/dhanisa/home.png',
+      '../assets/dhanisa/1.png',
+      '../assets/dhanisa/2.png',
+      '../assets/dhanisa/3.png'
+
+
+    ]
+  },
   // {
   //   id: 2,
   //   title: 'Creative Agency Site',
