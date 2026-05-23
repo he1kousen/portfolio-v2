@@ -4,10 +4,10 @@ import { useEffect, useState, useCallback } from 'react'
 
 /* ── Typewriter config ──────────────────────────────────────────────── */
 const ROLES = [
-  'Software Engineer.',
+  'Web Developer.',
   'Tech Enthusiast.',
-  'Gaming Addict.',
-  'Music Enjoyer.',
+  'Lifelong Learner.',
+  'Music Addict.',
 ]
 
 const TYPE_SPEED = 70        // ms per character typing

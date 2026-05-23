@@ -4,8 +4,9 @@ export const aboutInfo = {
   name: 'Muhammad Ikhsan',
   location: 'South Tangerang, ID',
   bio: [
-    'Frontend Developer focused on building clean, responsive, and interactive web interfaces. Comfortable working with React, TypeScript, Tailwind CSS, and animation-driven UI development.',
-    'I care about the details — how a layout breathes, how motion feels, and how an interface guides the user. Currently sharpening my craft through real projects and deeper frontend study.',
+    'I am a Junior Web Developer who is currently focusing on frontend development.',
+    'I enjoy building clean, responsive, and user-friendly web interfaces while continuously learning how design and code work together.',
+    'I am a curious person and a lifelong learner. I like exploring new technologies, improving my skills step by step, and learning through real projects.I care about the details — how a layout breathes, how motion feels, and how an interface guides the user. Currently sharpening my craft through real projects and deeper frontend study.',
   ],
 }
 

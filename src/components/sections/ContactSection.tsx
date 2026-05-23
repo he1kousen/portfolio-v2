@@ -10,13 +10,13 @@ export function ContactSection() {
     const mousePosRef = useRef<{ x: number | null, y: number | null }>({ x: null, y: null });
     const ctxRef = useRef<CanvasRenderingContext2D | null>(null);
     const animationFrameIdRef = useRef<number | null>(null);
-    
+
     const lastScrollYRef = useRef(0);
     const isScrollingDownRef = useRef(false);
 
     const drawArrow = useCallback(() => {
         if (!canvasRef.current || !targetRef.current || !ctxRef.current || !sectionRef.current) return;
-        
+
         const sectionRect = sectionRef.current.getBoundingClientRect();
         // Hanya muncul jika Contact Section sudah mulai terlihat di layar
         if (sectionRect.top > window.innerHeight - 50) return;
@@ -47,9 +47,9 @@ export function ContactSection() {
         const t = Math.max(-1, Math.min(1, (y0 - y1) / 200));
         const controlX = midX;
         const controlY = midY + offset * t;
-        
-        const r = Math.sqrt((x1 - x0)**2 + (y1 - y0)**2);
-        const opacity = Math.min(1.0, (r - Math.max(rect.width, rect.height) / 2) / 500); 
+
+        const r = Math.sqrt((x1 - x0) ** 2 + (y1 - y0) ** 2);
+        const opacity = Math.min(1.0, (r - Math.max(rect.width, rect.height) / 2) / 500);
 
         ctx.strokeStyle = `rgba(255, 255, 255, ${opacity * 0.4})`;
         ctx.lineWidth = 2;
@@ -58,12 +58,12 @@ export function ContactSection() {
         ctx.beginPath();
         ctx.moveTo(x0, y0);
         ctx.quadraticCurveTo(controlX, controlY, x1, y1);
-        ctx.setLineDash([8, 6]); 
+        ctx.setLineDash([8, 6]);
         ctx.stroke();
         ctx.restore();
 
         const angle = Math.atan2(y1 - controlY, x1 - controlX);
-        const headLength = 10 * (ctx.lineWidth / 1.5); 
+        const headLength = 10 * (ctx.lineWidth / 1.5);
         ctx.beginPath();
         ctx.moveTo(x1, y1);
         ctx.lineTo(
@@ -116,7 +116,7 @@ export function ContactSection() {
             }
             animationFrameIdRef.current = requestAnimationFrame(animateLoop);
         };
-        
+
         animateLoop();
 
         return () => {
@@ -131,7 +131,7 @@ export function ContactSection() {
 
     return (
         <section ref={sectionRef} className="relative mt-20 mb-8 flex flex-col items-center justify-center py-16 sm:py-24 border-t border-[rgba(242,242,242,0.1)] z-10">
-            <motion.div 
+            <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -153,9 +153,9 @@ export function ContactSection() {
                     <span>Contact Me</span>
                 </a>
             </motion.div>
-            
-            <canvas 
-                ref={canvasRef} 
+
+            <canvas
+                ref={canvasRef}
                 className="fixed inset-0 pointer-events-none z-50"
             />
         </section>

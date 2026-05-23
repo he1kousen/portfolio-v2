@@ -77,8 +77,8 @@ export function TopNav({ activeTab, onTabChange, sidebarOpen, onToggleSidebar }:
         {/* Left — Brand/Name */}
         <div className="flex-1">
           <div className="flex flex-col">
-            <span className="text-[14px] font-semibold text-white">he1kousen / Ikhsan</span>
-            <span className="text-[12px] font-normal text-[#8A8A8A]">Frontend Web Developer</span>
+            <span className="text-[14px] font-semibold text-white">Muhammad Ikhsan</span>
+            <span className="text-[12px] font-normal text-[#8A8A8A]">Junior Web Developer</span>
           </div>
         </div>
 
@@ -127,7 +127,7 @@ export function TopNav({ activeTab, onTabChange, sidebarOpen, onToggleSidebar }:
 
         {/* Right — Links */}
         <div className="hidden flex-1 items-center justify-end gap-6 md:flex">
-          <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="flex items-center gap-1 text-[13px] font-medium text-white hover:text-[#8A8A8A] transition-colors">
+          <a href="https://linkedin.com/in/he1kousen" target="_blank" rel="noreferrer" className="flex items-center gap-1 text-[13px] font-medium text-white hover:text-[#8A8A8A] transition-colors">
             LinkedIn <ArrowUpRight className="size-3.5 text-[#8A8A8A]" />
           </a>
           <a href="#" className="flex items-center gap-1 text-[13px] font-medium text-white hover:text-[#8A8A8A] transition-colors">
