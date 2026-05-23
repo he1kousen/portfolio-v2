@@ -30,10 +30,11 @@ function App() {
 
   return (
     <div
-      className="relative min-h-screen overflow-x-clip text-black dark:text-white bg-white dark:bg-[#0A0A0A] flex flex-col"
+      className="relative min-h-screen overflow-x-clip text-black dark:text-white flex flex-col"
+      style={{ background: '#0A0A0A' }}
     >
       {/* Ambient Top Light */}
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-[600px] w-full bg-[radial-gradient(ellipse_at_top,rgba(0,0,0,0.05)_0%,transparent_70%)] dark:bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.05)_0%,transparent_70%)]" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-[600px] w-full bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.05)_0%,transparent_70%)]" />
 
       {/* Sidebar overlay — portal-like, sits above everything */}
       <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />

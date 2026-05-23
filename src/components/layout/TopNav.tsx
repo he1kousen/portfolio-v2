@@ -68,11 +68,9 @@ function HamburgerIcon({ isOpen }: { isOpen: boolean }) {
   )
 }
 
-import { ArrowUpRight, Sun, Moon } from 'lucide-react'
-import { useDarkMode } from '../../hooks/useDarkMode'
+import { ArrowUpRight } from 'lucide-react'
 
 export function TopNav({ activeTab, onTabChange, sidebarOpen, onToggleSidebar }: TopNavProps) {
-  const { isDark, toggleDarkMode } = useDarkMode()
   return (
     <header className="fixed inset-x-0 top-0 z-50 h-20 bg-transparent">
       <div className="mx-auto flex h-full items-center justify-between px-6 md:px-12 pt-4">
@@ -111,18 +109,6 @@ export function TopNav({ activeTab, onTabChange, sidebarOpen, onToggleSidebar }:
               </button>
             ))}
           </div>
-
-          <motion.button
-            aria-label="Toggle dark mode"
-            onClick={toggleDarkMode}
-            whileTap={{ scale: 0.88 }}
-            className={cn(
-              'relative flex size-[38px] items-center justify-center rounded-full border shadow-floating backdrop-blur-md transition-all duration-300',
-              'border-gray-300 dark:border-[#2A2A2A] bg-white/80 dark:bg-[#141414]/80 text-gray-500 dark:text-[#8A8A8A] hover:border-gray-400 dark:hover:border-[#3D3D3D] hover:text-black dark:hover:text-white'
-            )}
-          >
-            {isDark ? <Sun className="size-4" /> : <Moon className="size-4" />}
-          </motion.button>
 
           <motion.button
             aria-label={sidebarOpen ? 'Close menu' : 'Open menu'}
