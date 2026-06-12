@@ -2,7 +2,7 @@ export const experiences = [
   {
     period: 'Sep 2025 \u2013 Present',
     location: 'South Tangerang',
-    title: 'Fullstack Web Developer',
+    title: 'Fullstack Web Developer Intern',
     company: 'PT. NEXT GENERATION SOLUTIONS',
     points: [
       'Collaborated within a development team to build an integrated ERP system using Laravel, Filament, and MySQL, focusing on the development of 4 core modules: inventory, CRM, HR, and sales.',

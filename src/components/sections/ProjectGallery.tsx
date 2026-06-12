@@ -91,14 +91,15 @@ export function ProjectGallery() {
                 </p>
 
                 {/* Stack Badges */}
-                <div className="mt-auto flex flex-wrap gap-2">
+                <div className="mt-auto flex flex-wrap gap-3">
                   {project.stack.map((tech) => (
-                    <span
-                      key={tech}
-                      className="rounded bg-[#1a1a1a] border border-[#2a2a2a] px-2.5 py-1 text-[12px] font-mono text-[#a0a0a0] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.08)] transition-colors group-hover:text-white/80"
-                    >
-                      {tech}
-                    </span>
+                    <img
+                      key={tech.name}
+                      src={tech.logo}
+                      alt={tech.name}
+                      title={tech.name}
+                      className="h-6 w-6 object-contain opacity-75 transition-opacity group-hover:opacity-100"
+                    />
                   ))}
                 </div>
               </div>

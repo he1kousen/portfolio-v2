@@ -1,11 +1,16 @@
 import React from 'react'
 
 
+export interface StackItem {
+  name: string
+  logo: string
+}
+
 export interface Project {
   id: number
   title: string
   description: string
-  stack: string[]
+  stack: StackItem[]
   image: string
   link: string
   companyLogo?: React.ReactNode | string
@@ -18,9 +23,13 @@ export const projects: Project[] = [
     id: 1,
     title: 'InteraERP',
     description: 'A comprehensive ERP solution designed for seamless resource management and real-time operational tracking.',
-    stack: ['Laravel', 'Filament', 'TailwindCSS'],
+    stack: [
+      { name: 'Laravel', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg' },
+      { name: 'Alpine.js', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/alpinejs/alpinejs-original.svg' },
+      { name: 'TailwindCSS', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg' }
+    ],
     image: '../assets/intera-erp/finance.png',
-    link: 'https://erp.arihub.my.id',
+    link: 'https://interaerp.com',
     companyLogo: '../assets/intera-erp/logo-light.png', // Contoh logo brand asli
     content: [
       'This Enterprise Resource Planning (ERP) platform was engineered to enhance operational efficiency and maintain data integrity across large-scale business environments. The system leverages the power of Laravel for its backend, ensuring a secure, scalable, and high-performance foundation capable of handling intensive business logic and heavy data processing.',
@@ -35,9 +44,14 @@ export const projects: Project[] = [
   },
   {
     id: 2,
-    title: 'Zenitech (Portfolio)',
+    title: 'Zenitech (Apple Reseller Store)',
     description: 'A full-featured Apple Authorized Reseller e-commerce platform with a clean, photography-first UI inspired by Apple design language.',
-    stack: ['React', 'Tailwind CSS', 'shadcn', 'Zustand', 'Framer Motion', 'Lenis', 'Supabase', 'Midtrans'],
+    stack: [
+      { name: 'React', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg' },
+      { name: 'Tailwind CSS', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg' },
+      { name: 'TypeScript', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg' },
+      { name: 'Supabase', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg' }
+    ],
     image: '../assets/zenitech/home.png',
     link: 'https://zen1tech.vercel.app',
     content: [
@@ -59,9 +73,13 @@ export const projects: Project[] = [
   },
   {
     id: 3,
-    title: 'Web Inventory (Portfolio)',
+    title: 'Web Inventory System',
     description: 'A web-based inventory management system built to streamline stock tracking and product data management.',
-    stack: ['Laravel', 'MySQL', 'Bootstrap'],
+    stack: [
+      { name: 'Laravel', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg' },
+      { name: 'MySQL', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg' },
+      { name: 'Bootstrap', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg' }
+    ],
     image: '../assets/dhanisa/home.png',
     link: '#',
     companyLogo: '../assets/dhanisa/dmj.png',
@@ -76,6 +94,31 @@ export const projects: Project[] = [
       '../assets/dhanisa/3.png'
 
 
+    ]
+  },
+  {
+    id: 4,
+    title: 'HARETA (Vehicle Management System)',
+    description: 'A web application for monitoring and booking vehicles at HARETA nickel mining company. Features vehicle booking, multi-level approval workflows, a dashboard with usage analytics, and periodic reporting.',
+    stack: [
+      { name: 'CodeIgniter 4', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/codeigniter/codeigniter-plain.svg' },
+      { name: 'React', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg' },
+      { name: 'Vite', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg' },
+      { name: 'MySQL', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg' },
+      { name: 'TailwindCSS', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg' },
+      { name: 'PHP', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg' }
+    ],
+    image: '../assets/hareta/dashboard.png',
+    link: '#',
+    content: [
+      'HARETA is a vehicle management and booking web application developed for a nickel mining company. The platform streamlines the entire vehicle request lifecycle — from submission to multi-level approval — ensuring accountability and operational efficiency across departments.',
+      'The backend is powered by CodeIgniter 4 with PHP 8.5+, providing a robust REST API secured with JWT authentication (Firebase/php-jwt). The frontend is built using React 19 and Vite 8, styled with TailwindCSS 4.x, delivering a modern and responsive dashboard experience. Data visualization is handled by Recharts for usage analytics, while react-data-table-component powers the interactive data tables for vehicle logs and booking records.'
+    ],
+    gallery: [
+      '../assets/hareta/dashboard.png',
+      '../assets/hareta/bookings.png',
+      '../assets/hareta/vehicles.png',
+      '../assets/hareta/log.png'
     ]
   },
   // {

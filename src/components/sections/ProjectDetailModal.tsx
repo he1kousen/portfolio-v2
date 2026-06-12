@@ -153,14 +153,15 @@ export function ProjectDetailModal({ project, onClose }: ProjectDetailModalProps
               </div>
 
               {/* Tech Stack */}
-              <div className="flex flex-wrap gap-2 mb-8">
+              <div className="flex flex-wrap gap-3 mb-8">
                 {project.stack.map((tech) => (
-                  <span
-                    key={tech}
-                    className="rounded-full border border-[#2a2a2a] bg-[#1a1a1a] px-3 py-1.5 text-[12px] font-mono text-[#a0a0a0] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.08)]"
-                  >
-                    {tech}
-                  </span>
+                  <img
+                    key={tech.name}
+                    src={tech.logo}
+                    alt={tech.name}
+                    title={tech.name}
+                    className="h-8 w-8 object-contain opacity-75 transition-opacity hover:opacity-100"
+                  />
                 ))}
               </div>
             </div>
