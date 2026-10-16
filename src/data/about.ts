@@ -4,9 +4,7 @@ export const aboutInfo = {
   name: 'Muhammad Ikhsan',
   location: 'South Tangerang, ID',
   bio: [
-    'I am a Junior Web Developer who is currently focusing on frontend development.',
-    'I enjoy building clean, responsive, and user-friendly web interfaces while continuously learning how design and code work together.',
-    'I am a curious person and a lifelong learner. I like exploring new technologies, improving my skills step by step, and learning through real projects.I care about the details — how a layout breathes, how motion feels, and how an interface guides the user. Currently sharpening my craft through real projects and deeper frontend study.',
+    'A person so called Web Developer who loves develop & engineering, with over a year of experience and some personal projects, I mostly utilize AI Agents to make my work faster, but also to not forgetting a solid fundamental. ',
   ],
 }
 
