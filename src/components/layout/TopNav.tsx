@@ -130,7 +130,7 @@ export function TopNav({ activeTab, onTabChange, sidebarOpen, onToggleSidebar }:
           <a href="https://linkedin.com/in/he1kousen" target="_blank" rel="noreferrer" className="flex items-center gap-1 text-[13px] font-medium text-white hover:text-[#8A8A8A] transition-colors">
             LinkedIn <ArrowUpRight className="size-3.5 text-[#8A8A8A]" />
           </a>
-          <a href="https://drive.google.com/file/d/1ubvFXN8UXQ77dtCejg5AXVycAyXU-5Ez/view?usp=sharing" className="flex items-center gap-1 text-[13px] font-medium text-white hover:text-[#8A8A8A] transition-colors">
+          <a href="https://drive.google.com/file/d/18erRdAzroW0Keup1Mg30g-Su7LREKbT7/view?usp=sharing" className="flex items-center gap-1 text-[13px] font-medium text-white hover:text-[#8A8A8A] transition-colors">
             Resume <ArrowUpRight className="size-3.5 text-[#8A8A8A]" />
           </a>
         </div>
