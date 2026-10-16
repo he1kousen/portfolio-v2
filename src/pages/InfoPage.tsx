@@ -103,8 +103,8 @@ export function InfoPage() {
       </motion.div>
 
 
-      {/* ── Technical Skills ──────────────────────────────
-      <motion.div
+      {/* ── Technical Skills ────────────────────────────── */}
+      {/* <motion.div
         variants={sectionReveal}
         viewport={{ once: true, amount: 0.2 }}
         {...revealProps}
