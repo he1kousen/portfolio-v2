@@ -4,7 +4,7 @@ import { aboutInfo } from '../data/about'
 import { certifications } from '../data/certifications'
 import { education } from '../data/education'
 import { experiences } from '../data/experiences'
-import { skillCategories } from '../data/skills'
+// import { skillCategories } from '../data/skills'
 import { socials } from '../data/socials'
 
 const smoothEase = [0.16, 1, 0.3, 1] as const
@@ -26,22 +26,22 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
   )
 }
 
-function SkillBadge({ label, icon, viewBox }: { label: string; icon?: string; viewBox?: string }) {
-  return (
-    <span className="inline-flex items-center gap-2 rounded-[8px] border border-[#3D3D3D] bg-bg-secondary px-3 py-1.5 text-[13px] font-medium text-white/70 transition-colors duration-200 hover:border-white/20 hover:text-white">
-      {icon && (
-        <svg
-          className="size-4 shrink-0 fill-current"
-          viewBox={viewBox || '0 0 24 24'}
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d={icon} />
-        </svg>
-      )}
-      {label}
-    </span>
-  )
-}
+// function SkillBadge({ label, icon, viewBox }: { label: string; icon?: string; viewBox?: string }) {
+//   return (
+//     <span className="inline-flex items-center gap-2 rounded-[8px] border border-[#3D3D3D] bg-bg-secondary px-3 py-1.5 text-[13px] font-medium text-white/70 transition-colors duration-200 hover:border-white/20 hover:text-white">
+//       {icon && (
+//         <svg
+//           className="size-4 shrink-0 fill-current"
+//           viewBox={viewBox || '0 0 24 24'}
+//           xmlns="http://www.w3.org/2000/svg"
+//         >
+//           <path d={icon} />
+//         </svg>
+//       )}
+//       {label}
+//     </span>
+//   )
+// }
 
 export function InfoPage() {
   const reduceMotion = useReducedMotion()
