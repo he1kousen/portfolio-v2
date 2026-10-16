@@ -1,6 +1,19 @@
 export const experiences = [
   {
-    period: 'Sep 2025 \u2013 Present',
+    period: 'Jun 2026 \u2013 Sep 2026',
+    location: 'South Jakarta',
+    title: 'Software Engineer',
+    company: 'PT. Korpora Trainindo Consultant',
+    points: [
+      'Developed and maintained pastiprestasi.com, a Laravel-based e-commerce platform offering online video courses in sales, leadership, and motivation training.',
+      'Built a Telegram bot automation system using OpenClaw, integrated with the WordPress REST API to automatically generate and publish article drafts, streamlining the companys content publishing workflow.',
+      'Designed and implemented a competitor benchmarking feature that compares pastiprestasi.com product pricing against best-selling courses from Coursera, Udemy, and Skill Academy to support pricing strategy decisions.',
+      'Integrated SerpAPI within the OpenClaw Telegram bot to automate market research, enabling real-time tracking of trending competitor products and data-driven pricing adjustments.',
+      'Automated internal business processes to reduce manual workload in content publishing and competitive market research, improving operational efficiency across teams',
+    ],
+  },
+  {
+    period: 'Sep 2025 \u2013 Jan 2026',
     location: 'South Tangerang',
     title: 'Fullstack Web Developer Intern',
     company: 'PT. NEXT GENERATION SOLUTIONS',
