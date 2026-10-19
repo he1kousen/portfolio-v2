@@ -21,6 +21,49 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
+    title: 'Pasti Prestasi',
+    description: 'A Laravel-based learning management system (LMS) and online course marketplace for sales, leadership, and motivation training — offering video lessons, live classes, quizzes, and automated certificates.',
+    stack: [
+      { name: 'Laravel', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg' },
+      { name: 'PHP', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg' },
+      { name: 'MySQL', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg' },
+      { name: 'TailwindCSS', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg' },
+      { name: 'Alpine.js', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/alpinejs/alpinejs-original.svg' },
+      { name: 'Bootstrap', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg' }
+    ],
+    image: '../assets/pastiprestasi/dashboard.png',
+    link: 'https://pastiprestasi.com',
+    content: [
+      'Pasti Prestasi is a Laravel-based learning management system (LMS) and online course marketplace delivering video courses, live classes, and certification programs in sales, leadership, and motivation training. Built on PHP 8 with Laravel 8 and a MySQL database, it manages the entire learning lifecycle — from course catalogs and enrollments to lesson progress, quizzes, assignments, and automated PDF certificate generation.',
+      'The platform integrates multiple payment gateways (Duitku and PrismaLink) behind a strategy-based payment service, supports Google OAuth login through Laravel Socialite, and exposes a token-secured REST API for external partners. Role-based access control is handled with Spatie Permission — separating admin and member areas — while Excel import/export, QR codes, and scheduled backups round out the administrative tooling.',
+      'The frontend pairs a modern Tailwind CSS design system with Alpine.js and Swiper-powered carousels, plus a Plyr video player for the lessons, alongside a legacy Bootstrap 5 and jQuery interface for the admin screens. Assets are bundled with Laravel Mix (Webpack), and the whole application follows a modular MVC architecture on top of Laravel.'
+    ],
+    gallery: [
+      '../assets/pastiprestasi/course.png'
+    ]
+  },
+  {
+    id: 2,
+    title: 'KoLab+',
+    description: 'An AI-powered internal operations platform (ERP-style) that unifies HR, task & project management, accounting, and marketing automation for a consulting company.',
+    stack: [
+      { name: 'Laravel', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg' },
+      { name: 'PHP', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg' },
+      { name: 'MySQL', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg' },
+      { name: 'Bootstrap', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg' },
+      { name: 'jQuery', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original.svg' },
+      { name: 'Google Gemini', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/google/google-original.svg' }
+    ],
+    image: '../assets/kolab/dashboard.png',
+    link: '#',
+    content: [
+      'KoLab+ is a Laravel-based internal operations platform (an ERP-style "super app") built for PT. Korpora Trainindo Consultant. It consolidates previously scattered business processes — HR and leave management, task and project tracking, meetings and coordination, finance and accounting, and marketing — into a single role-based dashboard with granular menu-level access control.',
+      'A defining feature is its deep AI integration with Google Gemini (2.0/2.5 Flash with automatic model fallback). It powers WhatsApp-blast copywriting selectable by expert style (Eugene Schwartz, Dan Kennedy, AIDA, PAS, etc.), competitor and product research via SerpAPI, AI-generated business proposals exported to PPTX and Excel, recruitment interview analysis, and receipt scanning for expense entry. Google Workspace is wired in as well — Drive for file storage and proposal material, plus two-way Google Calendar sync with automated WhatsApp reminders through the Fonnte gateway.',
+      'Built on PHP 8.1 and Laravel 10 with a dedicated service layer, the platform uses Spatie Permission for role-based access control (superadmin, admin, supervisor, user) and scheduled jobs for calendar reminders. It also bridges to the Pasti Prestasi LMS for voucher and product approval workflows. The interface is built on the Mantis Bootstrap 5 admin template with jQuery, FullCalendar, DataTables, Dropzone, and Quill, while front-end assets are bundled with Vite.'
+    ]
+  },
+  {
+    id: 3,
     title: 'InteraERP',
     description: 'A comprehensive ERP solution designed for seamless resource management and real-time operational tracking.',
     stack: [
@@ -43,8 +86,8 @@ export const projects: Project[] = [
     ]
   },
   {
-    id: 2,
-    title: 'Zenitech (Apple Reseller Store)',
+    id: 4,
+    title: 'Zenitech',
     description: 'A full-featured Apple Authorized Reseller e-commerce platform with a clean, photography-first UI inspired by Apple design language.',
     stack: [
       { name: 'React', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg' },
@@ -60,7 +103,6 @@ export const projects: Project[] = [
       'The frontend is built with React 18 and Vite, styled with Tailwind CSS v4 and shadcn/ui, with smooth animations powered by Framer Motion, GSAP, and Lenis. Supabase serves as the backend — handling PostgreSQL, authentication, file storage, and edge functions — with the frontend deployed on Vercel.'
     ],
     gallery: [
-      '../assets/zenitech/home.png',
       '../assets/zenitech/bestsellers.png',
       '../assets/zenitech/featured.png',
       '../assets/zenitech/products.png',
@@ -72,8 +114,8 @@ export const projects: Project[] = [
     ]
   },
   {
-    id: 3,
-    title: 'Web Inventory System',
+    id: 5,
+    title: 'DMJ WebInven',
     description: 'A web-based inventory management system built to streamline stock tracking and product data management.',
     stack: [
       { name: 'Laravel', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg' },
@@ -88,7 +130,6 @@ export const projects: Project[] = [
       'The user interface is built with Bootstrap and jQuery, delivering a responsive and dynamic experience with asynchronous requests for smooth interaction. The system was designed with careful attention to database schema architecture and underwent functional testing throughout the development lifecycle to ensure reliability in real-world use.'
     ],
     gallery: [
-      '../assets/dhanisa/home.png',
       '../assets/dhanisa/1.png',
       '../assets/dhanisa/2.png',
       '../assets/dhanisa/3.png'
@@ -97,8 +138,8 @@ export const projects: Project[] = [
     ]
   },
   {
-    id: 4,
-    title: 'HARETA (Vehicle Management System)',
+    id: 6,
+    title: 'Hareta VMS',
     description: 'A web application for monitoring and booking vehicles at HARETA nickel mining company. Features vehicle booking, multi-level approval workflows, a dashboard with usage analytics, and periodic reporting.',
     stack: [
       { name: 'CodeIgniter 4', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/codeigniter/codeigniter-plain.svg' },
@@ -115,7 +156,6 @@ export const projects: Project[] = [
       'The backend is powered by CodeIgniter 4 with PHP 8.5+, providing a robust REST API secured with JWT authentication (Firebase/php-jwt). The frontend is built using React 19 and Vite 8, styled with TailwindCSS 4.x, delivering a modern and responsive dashboard experience. Data visualization is handled by Recharts for usage analytics, while react-data-table-component powers the interactive data tables for vehicle logs and booking records.'
     ],
     gallery: [
-      '../assets/hareta/dashboard.png',
       '../assets/hareta/bookings.png',
       '../assets/hareta/vehicles.png',
       '../assets/hareta/log.png'
