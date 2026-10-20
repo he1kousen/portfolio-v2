@@ -21,6 +21,39 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
+    title: 'Clarify',
+    description: 'A personal management platform that unifies tasks, to-dos, ideas, calendar, finances, and files — on the web and in an offline-first Flutter app sharing one Supabase backend.',
+    stack: [
+      { name: 'Next.js', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg' },
+      { name: 'React', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg' },
+      { name: 'TypeScript', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg' },
+      { name: 'Tailwind CSS', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg' },
+      { name: 'Supabase', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg' },
+      { name: 'Flutter', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg' },
+      { name: 'Dart', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg' },
+      { name: 'Google Calendar API', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/google/google-original.svg' },
+      { name: 'Vercel', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg' }
+    ],
+    image: '../assets/clarify/home.png',
+    link: '#',
+    content: [
+      'Clarify is a personal management platform that brings everyday life into one place — tasks, quick to-dos, ideas, calendar, finances, and file storage — behind a single Google account and a shared design system. Tasks follow a Category → Project → Task hierarchy, with a simple checklist view for daily routines and a Trello/Jira-style kanban board with drag-and-drop for work projects, while quick to-dos handle one-off items with due dates and 30-minute / H-1 / H-3 / H-7 reminders. Ideas are captured in a flat list with a realized / not realized toggle, and a dashboard aggregates what needs attention across every module.',
+      'The web app is built with Next.js 16 (App Router) and React 19, styled with Tailwind CSS v4 on a custom token system with light and dark themes, and backed by Supabase (Postgres with Row Level Security) and Google OAuth. Each module has its own REST-style API routes secured with the Supabase JWT. Calendar is a two-way live proxy to the Google Calendar API with no local copy of events, Finance covers transactions, categories, debts, recurring bills, and monthly reports with charts plus CSV/PDF export, and Storage is a folder-based file manager built on Supabase Storage. The app is deployed on Vercel.',
+      'The Flutter client shares the same backend and data but is offline-first: tasks, projects, categories, to-dos, ideas, and finance records are mirrored in local SQLite via Drift, every change is queued as pending_create / pending_update / pending_delete, and a two-way sync through /api/sync pushes and pulls changes when connectivity returns, resolving conflicts last-write-wins by updated_at. State is managed with Riverpod, finance reports are charted with fl_chart, and calendar reminders are delivered as local notifications. The interface — module rail, contextual category/project panel, and responsive drawer on narrow screens — mirrors the web design tokens so both platforms feel like the same product.'
+    ]
+    // gallery: [
+    //   '../assets/clarify/tasks-list.png',
+    //   '../assets/clarify/tasks-kanban.png',
+    //   '../assets/clarify/ideas.png',
+    //   '../assets/clarify/calendar.png',
+    //   '../assets/clarify/finance.png',
+    //   '../assets/clarify/storage.png',
+    //   '../assets/clarify/mobile-dashboard.png',
+    //   '../assets/clarify/mobile-tasks.png'
+    // ]
+  },
+  {
+    id: 2,
     title: 'Pasti Prestasi',
     description: 'A Laravel-based learning management system (LMS) and online course marketplace for sales, leadership, and motivation training — offering video lessons, live classes, quizzes, and automated certificates.',
     stack: [
@@ -43,7 +76,7 @@ export const projects: Project[] = [
     ]
   },
   {
-    id: 2,
+    id: 3,
     title: 'KoLab+',
     description: 'An AI-powered internal operations platform (ERP-style) that unifies HR, task & project management, accounting, and marketing automation for a consulting company.',
     stack: [
@@ -63,7 +96,7 @@ export const projects: Project[] = [
     ]
   },
   {
-    id: 3,
+    id: 4,
     title: 'InteraERP',
     description: 'A comprehensive ERP solution designed for seamless resource management and real-time operational tracking.',
     stack: [
@@ -86,7 +119,7 @@ export const projects: Project[] = [
     ]
   },
   {
-    id: 4,
+    id: 5,
     title: 'Zenitech',
     description: 'A full-featured Apple Authorized Reseller e-commerce platform with a clean, photography-first UI inspired by Apple design language.',
     stack: [
@@ -114,7 +147,7 @@ export const projects: Project[] = [
     ]
   },
   {
-    id: 5,
+    id: 6,
     title: 'DMJ WebInven',
     description: 'A web-based inventory management system built to streamline stock tracking and product data management.',
     stack: [
@@ -138,7 +171,7 @@ export const projects: Project[] = [
     ]
   },
   {
-    id: 6,
+    id: 7,
     title: 'Hareta VMS',
     description: 'A web application for monitoring and booking vehicles at HARETA nickel mining company. Features vehicle booking, multi-level approval workflows, a dashboard with usage analytics, and periodic reporting.',
     stack: [
