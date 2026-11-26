@@ -78,7 +78,7 @@ export function TopNav({ activeTab, onTabChange, sidebarOpen, onToggleSidebar }:
         <div className="flex-1">
           <div className="flex flex-col">
             <span className="text-[14px] font-semibold text-white">Muhammad Ikhsan</span>
-            <span className="text-[12px] font-normal text-[#8A8A8A]">Junior Web Developer</span>
+            <span className="text-[12px] font-normal text-[#8A8A8A]">Fullstack Web Developer</span>
           </div>
         </div>
 
